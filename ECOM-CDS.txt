@@ -1,3 +1,94 @@
+1. Users
+
+    UserID (Primary Key)
+    Name
+    Gender
+    DOB (Date of Birth)
+    Email (Unique)
+    Phone
+    Password
+    Location
+    ProfileCreatedDate
+
+2. Profiles
+
+    ProfileID (Primary Key)
+    UserID (Foreign Key references Users.UserID)
+    MaritalStatus
+    Religion
+    Caste
+    Education
+    Profession
+    Income
+    AboutMe
+
+3. Preferences
+
+    PreferenceID (Primary Key)
+    UserID (Foreign Key references Users.UserID)
+    PreferredAgeFrom
+    PreferredAgeTo
+    PreferredReligion
+    PreferredCaste
+    PreferredEducation
+    PreferredProfession
+
+4. Matches
+
+    MatchID (Primary Key)
+    UserID1 (Foreign Key references Users.UserID)
+    UserID2 (Foreign Key references Users.UserID)
+    MatchDate
+
+5. Messages
+
+    MessageID (Primary Key)
+    SenderID (Foreign Key references Users.UserID)
+    ReceiverID (Foreign Key references Users.UserID)
+    MessageContent
+    MessageDate
+
+Tough SQL Question Paper
+Section A: Advanced Queries (10 points each)
+
+    Write a query to find the top 5 users with the highest number of matches.
+
+    Retrieve the names of all users who have sent messages to at least 3 different users in the last month.
+
+    Find the average age of users who belong to a specific religion (e.g., "Christianity") and are currently matched.
+
+    Write a query to list all profiles that match the preferences of a specific user.
+
+    Display the count of users grouped by marital status.
+
+Section B: Subqueries and Joins (15 points each)
+
+    Write a query to find the names of users who are mutual matches (i.e., both users have matched with each other).
+
+    Retrieve details of users whose profiles have been viewed by the most number of other users.
+
+    Find the details of users who have sent the highest number of messages to other users but received no replies.
+
+    Write a query to list users who meet all the criteria of at least one other user's preferences.
+
+    Display the names and professions of users who have not updated their preferences.
+
+Section C: Complex Scenarios (20 points each)
+
+    Write a query to calculate the percentage of users in each profession who are currently matched.
+
+    Find users who have at least one match outside their specified preferences and list the matched user’s details.
+
+    Write a query to determine the longest streak of daily messages exchanged between any two users.
+
+    Retrieve details of users who have profiles that match 100% with another user's preferences and vice versa.
+
+    Write a query to find users who are matched but have not sent any messages to their matches.
+
+
+##################
+
+
 Database Schema
 1. Users
 
